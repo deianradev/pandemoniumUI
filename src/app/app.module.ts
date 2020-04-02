@@ -14,24 +14,6 @@ import { NavigationComponent } from "./navigation/navigation.component";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatInputModule } from "@angular/material/input";
-/* Fusion Charts */
-import { FusionChartsModule } from "angular-fusioncharts";
-
-// Load FusionCharts
-import * as FusionCharts from "fusioncharts";
-
-// Load Maps
-import * as Maps from "fusioncharts/fusioncharts.maps";
-
-// Load WorldMap definition
-import * as World from "fusioncharts/maps/fusioncharts.world";
-
-// Load Charts module
-import * as Charts from "fusioncharts/fusioncharts.charts";
-
-// Load FusionTheme theme
-import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
-
 import { MapComponent } from "./map/map.component";
 import { PieComponent } from "./pie/pie.component";
 import { BarComponent } from "./bar/bar.component";
@@ -39,12 +21,17 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatCardModule } from "@angular/material/card";
 import { MatMenuModule } from "@angular/material/menu";
-import { AboutComponent } from "./about/about.component";
 import { LoginComponent } from "./auth/login/login.component";
-import { DeletexComponent } from './deletex/deletex.component';
-import { MatSelectModule } from '@angular/material/select';
-import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from "@angular/material/select";
+import { MatRadioModule } from "@angular/material/radio";
 
+/* Fusion Charts Imports */
+import { FusionChartsModule } from "angular-fusioncharts";
+import * as FusionCharts from "fusioncharts";
+import * as Maps from "fusioncharts/fusioncharts.maps";
+import * as World from "fusioncharts/maps/fusioncharts.world";
+import * as Charts from "fusioncharts/fusioncharts.charts";
+import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 // Add dependencies for FusionChartsModule
 FusionChartsModule.fcRoot(FusionCharts, Charts, Maps, World, FusionTheme);
 
@@ -56,9 +43,7 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, Maps, World, FusionTheme);
     PieComponent,
     BarComponent,
     DashboardComponent,
-    AboutComponent,
-    LoginComponent,
-    DeletexComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,

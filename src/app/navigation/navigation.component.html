@@ -1,42 +1,28 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item routerLink="">Map</a>
-      <a mat-list-item routerLink="about">About</a>
-      <!-- <a mat-list-item routerLink="/pie">Pie Chart</a> -->
-      <!-- <a mat-list-item routerLink="/bar">Bar Chart</a> -->
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <!-- <mat-toolbar color="primary">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>Fusion Charts Demo</span>
-      <button type="button" aria-label="logout" mat-icon-button></button>
-    </mat-toolbar> -->
-
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-          *ngIf="isHandset$ | async">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-        <span>Fusion Charts Demo</span>
-        <span class="nav-spacer"></span>
-        <button mat-icon-button>
-          <mat-icon class="nav-icon" aria-hidden="false" aria-label="Example help icon">help_outline</mat-icon>
-        </button>
-        <button mat-icon-button>
-          <mat-icon class="nav-icon" aria-hidden="false" aria-label="Example logout icon">logout</mat-icon>
-        </button>
-      </mat-toolbar-row>
-    </mat-toolbar>
-
-    <!-- Add Content Here -->
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Fusion Charts Demo</span>
+    <span class="nav-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon
+        class="nav-icon"
+        aria-hidden="false"
+        aria-label="Example help icon"
+        >help_outline</mat-icon
+      >
+    </button>
+    <button
+      mat-icon-button
+      routerLink="/login"
+      routerLinkActive="router-link-active"
+    >
+      <mat-icon
+        class="nav-icon"
+        aria-hidden="false"
+        aria-label="Example logout icon"
+        >logout</mat-icon
+      >
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!-- Add Content Here -->
+<router-outlet></router-outlet>

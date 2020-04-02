@@ -18,14 +18,12 @@
 
 .dashboard-card-content {
   text-align: center;
-    
   margin-top: 40px;
   padding-bottom: 80px;
-  
 }
 
 .statistic {
-font-size: 40px;
+  font-size: 40px;
 }
 
 .statistic-title {
