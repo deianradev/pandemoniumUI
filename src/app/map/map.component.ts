@@ -21,19 +21,21 @@ export class MapComponent implements OnInit {
       {
         type: "maps/usa",
         overlayButton: {
-          message: "close",
-          fontColor: "880000",
-          bgColor: "FFEEEE",
-          borderColor: "660000",
+          message: "Back",
+          fontColor: "FFF",
+          bgColor: "000",
+          borderColor: "000",
+          padding: "20",
         },
       },
       {
         type: "maps/virginia",
         overlayButton: {
-          message: "close",
+          message: "Back",
           fontColor: "880000",
-          bgColor: "FFEEEE",
-          borderColor: "660000",
+          bgColor: "000",
+          borderColor: "000",
+          padding: "20",
         },
       },
     ]);
@@ -41,17 +43,18 @@ export class MapComponent implements OnInit {
 
   dataSource = {
     chart: {
-      caption: "World Population Density",
-      subcaption: "Number of people per Square Mile",
-      theme: "fusion",
+      caption: "Worldwide Infections",
+      subcaption: "Number of people infected per continent",
+      theme: "candy",
       formatNumberScale: "0",
-      showLabels: "1",
+      showLabels: "0",
       nullEntityColor: "#C2C2D6",
       nullEntityAlpha: "50",
       hoverOnNull: "0",
       useSNameInLabels: "0",
       entityFillColor: "#A8A8A8",
       entityFillHoverColor: "#E5E5E9",
+      bgColor: "#191B1F",
     },
     colorrange: {
       startlabel: "Low",
@@ -81,43 +84,45 @@ export class MapComponent implements OnInit {
       {
         id: "SA",
         value: "57.1",
-        showLabel: "1",
+        showLabel: "0",
       },
       {
         id: "AS",
         value: "247",
-        showLabel: "1",
+        showLabel: "0",
       },
       {
         id: "EU",
         value: "188.5",
-        showLabel: "1",
+        showLabel: "0",
       },
       {
         id: "AF",
         value: "87.2",
-        showLabel: "1",
+        showLabel: "0",
       },
       {
         id: "AU",
         value: "8.32",
-        showLabel: "1",
+        showLabel: "0",
       },
     ],
+    /* linked data for states chart */
     linkeddata: [
       {
         id: "NA",
         linkedchart: {
           chart: {
-            caption: "US Population Density by State",
-            subcaption: "Number of people per Square Mile",
+            caption: "Infections by state",
+            subcaption: "Number of people infected by state",
             entityFillHoverColor: "#E5E5E9",
-            showLabels: "1",
+            showLabels: "0",
             entityFillColor: "#A8A8A8",
-            theme: "fusion",
+            theme: "candy",
             showBorder: "1",
             bordercolor: "#FFFFFF",
-            entityborderThickness: "3",
+            entityborderThickness: "1",
+            bgColor: "#191B1F",
           },
           colorrange: {
             startlabel: "Low",
@@ -344,22 +349,22 @@ export class MapComponent implements OnInit {
               value: "503",
             },
           ],
-
-          //TEST
+          /* linked data for counties chart */
           linkeddata: [
             {
               id: "VA",
               linkedchart: {
                 chart: {
-                  caption: "COVID-19 Cases By State",
+                  caption: "COVID-19 Cases By County",
                   subcaption: "Number of confirmed positive cases",
                   entityFillHoverColor: "#E5E5E9",
                   showLabels: "0",
                   entityFillColor: "#A8A8A8",
-                  theme: "fusion",
+                  theme: "candy",
                   showBorder: "1",
                   bordercolor: "#FFFFFF",
-                  entityborderThickness: "3",
+                  entityborderThickness: "1",
+                  bgColor: "#191B1F",
                 },
                 colorrange: {
                   startlabel: "Low",

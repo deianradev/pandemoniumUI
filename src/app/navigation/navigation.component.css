@@ -1,19 +1,9 @@
-.sidenav-container {
-  height: 100%;
-}
-
-.sidenav {
-  width: 200px;
-}
-
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
-.mat-toolbar.mat-primary {
+.toolbar {
   position: sticky;
   top: 0;
   z-index: 1;
+  background-color: #101114;
+  padding: 10px 0;
 }
 
 .nav-icon {
@@ -22,4 +12,18 @@
 
 .nav-spacer {
   flex: 1 1 auto;
+}
+
+/* logo */
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#logo {
+  width: 180px;
+}
+
+#sub-logo {
+  width: 80px;
+  padding-left: 5px;
 }

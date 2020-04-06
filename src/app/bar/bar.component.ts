@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 @Component({
   selector: "app-bar",
   templateUrl: "./bar.component.html",
-  styleUrls: ["./bar.component.css"]
+  styleUrls: ["./bar.component.css"],
 })
 export class BarComponent implements OnInit {
   ngOnInit(): void {}
@@ -16,7 +16,7 @@ export class BarComponent implements OnInit {
       width: "525",
       height: "300",
       type: "column2d",
-      dataFormat: "json"
+      dataFormat: "json",
     };
 
     this.dataSource = {
@@ -26,42 +26,43 @@ export class BarComponent implements OnInit {
         xAxisName: "Country",
         yAxisName: "Reserves (MMbbl)",
         numberSuffix: "K",
-        theme: "fusion"
+        theme: "candy",
+        bgColor: "#191B1F",
       },
       data: [
         {
           label: "Venezuela",
-          value: "290"
+          value: "290",
         },
         {
           label: "Saudi",
-          value: "260"
+          value: "260",
         },
         {
           label: "Canada",
-          value: "180"
+          value: "180",
         },
         {
           label: "Iran",
-          value: "140"
+          value: "140",
         },
         {
           label: "Russia",
-          value: "115"
+          value: "115",
         },
         {
           label: "UAE",
-          value: "100"
+          value: "100",
         },
         {
           label: "US",
-          value: "30"
+          value: "30",
         },
         {
           label: "China",
-          value: "30"
-        }
-      ]
+          value: "30",
+        },
+      ],
     };
   }
 }
