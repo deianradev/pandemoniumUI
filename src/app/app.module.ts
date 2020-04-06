@@ -30,10 +30,20 @@ import { FusionChartsModule } from "angular-fusioncharts";
 import * as FusionCharts from "fusioncharts";
 import * as Maps from "fusioncharts/fusioncharts.maps";
 import * as World from "fusioncharts/maps/fusioncharts.world";
+import * as USA from "fusioncharts/maps/fusioncharts.usa";
+import * as virginia from "fusioncharts/maps/fusioncharts.virginia";
 import * as Charts from "fusioncharts/fusioncharts.charts";
 import * as FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 // Add dependencies for FusionChartsModule
-FusionChartsModule.fcRoot(FusionCharts, Charts, Maps, World, FusionTheme);
+FusionChartsModule.fcRoot(
+  FusionCharts,
+  Charts,
+  USA,
+  virginia,
+  Maps,
+  World,
+  FusionTheme
+);
 
 @NgModule({
   declarations: [
@@ -43,7 +53,7 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, Maps, World, FusionTheme);
     PieComponent,
     BarComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,9 +73,9 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, Maps, World, FusionTheme);
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
