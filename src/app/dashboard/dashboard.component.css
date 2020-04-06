@@ -19,8 +19,7 @@
 
 .dashboard-card-content {
   text-align: center;
-  margin-top: 40px;
-  padding-bottom: 80px;
+  margin-top: 30px;
 }
 
 .statistic {
@@ -28,6 +27,6 @@
 }
 
 .statistic-title {
-  padding-top: 40px;
+  padding-top: 10px;
   font-size: 20px;
 }
