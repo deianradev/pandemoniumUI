@@ -24,6 +24,8 @@ import { MatMenuModule } from "@angular/material/menu";
 import { LoginComponent } from "./auth/login/login.component";
 import { MatSelectModule } from "@angular/material/select";
 import { MatRadioModule } from "@angular/material/radio";
+import { BarService } from "./bar/bar.service"; 
+import { HttpClientModule } from "@angular/common/http";
 
 /* Fusion Charts Imports */
 import { FusionChartsModule } from "angular-fusioncharts";
@@ -77,8 +79,9 @@ FusionChartsModule.fcRoot(
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BarService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
